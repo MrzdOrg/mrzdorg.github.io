@@ -1,0 +1,20 @@
+/* style.css — базовые стили: canvas на весь экран, без отступов и скролла.
+   Физический размер canvas в пикселях устанавливается в engine.js с учётом DPR. */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* должен совпадать с CONFIG.BG_COLOR */
+    overflow: hidden;
+    touch-action: none;      /* отключает жесты браузера (скролл, зум) на тач-экранах */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+canvas {
+    display: block; /* убирает inline-отступ снизу */
+    width: 100%;
+    height: 100%;
+}
